@@ -1,4 +1,4 @@
-#!/bin/usr/env pyhton3
+#!/usr/bin/env pyhton3
 
 class Plant:
 	def __init__(self, name: str, height: int, age: int) -> None:
@@ -9,7 +9,7 @@ class Plant:
 	def show(self) -> None:
 		print(f"{self.name}: {self.height}cm, {self.age} days old")
 
-def main() -> None:
+def ft_garden_data() -> None:
 	print("=== Garden Plant Registry ===")
 
 	# Instantiating Plant 1
@@ -25,4 +25,4 @@ def main() -> None:
 	plant3.show()
 
 if __name__ == "__main__":
-	main()
+	ft_garden_data()
