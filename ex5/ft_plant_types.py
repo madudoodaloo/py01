@@ -56,7 +56,7 @@ class Plant:
     def show(self) -> None:
         """Display current plant info."""
         print(
-            f"{self.name}: {self._height:.1f}cm, "
+            f"{self.name.capitalize()}: {self._height:.1f}cm, "
             f"{self._age} days old"
         )
 
@@ -120,15 +120,11 @@ class Vegetable(Plant):
         self.harvest_season: str = harvest_season
         self.nutritional_value: int = 0
 
-    def grow(self, growth_cm: float) -> None:
-        print(f"[make {self.name} grow {round(growth_cm, 1)}cm]")
-        self.nutritional_value += growth_cm / 2
+    def grow_and_age(self, growth_cm: float, days_older: int) -> None:
+        print(f"[make {self.name} grow and age for {days_older} days]")
         super().grow(growth_cm)
-
-    def age(self, days_older: int) -> None:
-        print(f"[make {self.name} grow {days_older} days older]")
-        self.nutritional_value += days_older
         super().age(days_older)
+        self.nutritional_value += days_older
 
     def show(self) -> None:
         super().show()
@@ -153,9 +149,7 @@ def ft_plant_types() -> None:
     vege = Vegetable("Tomate", 5, 10, "April")
     print("=== show ===")
     vege.show()
-    vege.grow(5)
-    vege.show()
-    vege.age(20)
+    vege.grow_and_age(5, 20)
     vege.show()
 
 
