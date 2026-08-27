@@ -17,3 +17,8 @@ then progresses to Object-Oriented Programming. Each exercise should
 contain the requested definitions and any required code. You may
 include simple test code at the bottom of each file using if __name__
 == "__main__": blocks for your own testing.
+
+
+
+okay let's go back to py01 ex5, do the usual presentation:
+subject analysis and oop terminology and key concepts expected to know on this exercise, and then the resolution and guidelines for further investigation to understand proper python programming practices
