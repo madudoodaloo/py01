@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-from __future__ import annotations
 
 class Plant:
     """Base class representing a plant with nested statistics tracking."""
@@ -39,7 +38,7 @@ class Plant:
         return days > 365
 
     @classmethod
-    def create_anonymous(cls) -> Plant:
+    def create_anonymous(cls) -> "Plant":
         """Class method factory for an unknown plant."""
         return cls("Unknown plant", 0.0, 0)
 
@@ -57,26 +56,6 @@ class Plant:
             f"{self.name.capitalize()}: {self._height:.1f}cm, "
             f"{self._age} days old"
         )
-
-
-class Flower(Plant):
-    """Specialized class for flowers."""
-
-    def __init__(self, name: str, height: float, age: int, color: str) -> None:
-        super().__init__(name, height, age)
-        self.color: str = color
-        self.is_blooming: bool = False
-
-    def bloom(self) -> None:
-        self.is_blooming = True
-
-    def show(self) -> None:
-        super().show()
-        print(f"Color: {self.color}")
-        if self.is_blooming:
-            print(f"{self.name.capitalize()} is blooming beautifully!")
-        else:
-            print(f"{self.name.capitalize()} has not bloomed yet")
 
 
 class Tree(Plant):
@@ -116,6 +95,26 @@ class Tree(Plant):
         print(f"Trunk diameter: {round(self.trunk_diameter, 1)}cm")
 
 
+class Flower(Plant):
+    """Specialized class for flowers."""
+
+    def __init__(self, name: str, height: float, age: int, color: str) -> None:
+        super().__init__(name, height, age)
+        self.color: str = color
+        self.is_blooming: bool = False
+
+    def bloom(self) -> None:
+        self.is_blooming = True
+
+    def show(self) -> None:
+        super().show()
+        print(f"Color: {self.color}")
+        if self.is_blooming:
+            print(f"{self.name.capitalize()} is blooming beautifully!")
+        else:
+            print(f"{self.name.capitalize()} has not bloomed yet")
+
+
 class Seed(Flower):
     """Specialized class inheriting from Flower, managing seed counts."""
 
@@ -135,7 +134,7 @@ class Seed(Flower):
         print(f"Seeds: {self.seeds}")
 
 
-def show_plant_stats(plant: Plant) -> None:
+def show_plant_stats(plant: "Plant") -> None:
     """Standalone helper function to display plant statistics."""
     print(f"[statistics for {plant.name.capitalize()}]")
     plant.stats.display()
