@@ -1,4 +1,7 @@
-#!/usr/bin/env pyhton3
+#!/usr/bin/env python3
+"""
+Plant Class and multiple plant management
+"""
 
 class Plant:
     def __init__(self, name: str, height: int, age: int) -> None:
@@ -13,15 +16,12 @@ class Plant:
 def ft_garden_data() -> None:
     print("=== Garden Plant Registry ===")
 
-    # Instantiating Plant 1
     plant1 = Plant("Rose", 25, 30)
     plant1.show()
 
-    # Instantiating Plant 2
     plant2 = Plant("Sunflower", 80, 45)
     plant2.show()
 
-    # Instantiating Plant 3
     plant3 = Plant("Cactus", 15, 120)
     plant3.show()
 

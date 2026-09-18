@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""Streamlining the plant creation process: instantiate and initialize a class"""
+# not sure if its suposed to print inside init or in ft_plant - also ugly print in init
 
 class Plant:
     def __init__(self, name: str, height: float, age_days: int) -> None:
@@ -25,6 +27,7 @@ def ft_plant_growth() -> None:
         Plant("Fern", 15.0, 120),
         Plant("Dalia", 50.0, 1),
     ]
+
     plants[5].show()
 
 

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Using class methods in a loop"""
 
 class Plant:
     def __init__(self, name: str, height: float, age_days: int) -> None:
@@ -26,7 +27,7 @@ def ft_plant_growth() -> None:
     initial_height: float = plant.height
 
     for day in range(1, 8):
-        plant.grow()
+        plant.grow(day)
         plant.age(1)
         print(f"=== Day {day} ===")
         plant.show()
