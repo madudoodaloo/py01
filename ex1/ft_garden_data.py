@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-"""
-Plant Class and multiple plant management
-"""
+""" Plant Class and creating plant objects, with different attributes and display through instance methods"""
 
 class Plant:
     def __init__(self, name: str, height: int, age: int) -> None:

@@ -3,6 +3,16 @@
 class Plant:
     """Base class representing a plant with nested statistics tracking."""
 
+    @staticmethod
+    def is_older_than_year(days: int) -> bool:
+        """Static method checking if age exceeds 365 days."""
+        return days > 365
+
+    @classmethod
+    def create_anonymous(cls) -> "Plant":
+        """Class method factory for an unknown plant."""
+        return cls("Unknown plant", 0.0, 0)
+
     class Stats:
         """Nested class tracking method call statistics."""
 
@@ -31,16 +41,6 @@ class Plant:
         self._height: float = float(height)
         self._age: int = int(age)
         self.stats: Plant.Stats = self.Stats()
-
-    @staticmethod
-    def is_older_than_year(days: int) -> bool:
-        """Static method checking if age exceeds 365 days."""
-        return days > 365
-
-    @classmethod
-    def create_anonymous(cls) -> "Plant":
-        """Class method factory for an unknown plant."""
-        return cls("Unknown plant", 0.0, 0)
 
     def grow(self, cm: float = 0.8) -> None:
         self._height += cm

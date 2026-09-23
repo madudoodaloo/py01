@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Using class methods in a loop"""
+"""Multiple object management and calling instance methods in a loop"""
 
 class Plant:
     def __init__(self, name: str, height: float, age_days: int) -> None:
@@ -10,7 +10,8 @@ class Plant:
     def show(self) -> None:
         print(
             f"{self.name}: {round(self.height, 1)}cm, "
-            f"{self.age_days} days old")
+            f"{self.age_days} days old"
+            )
 
     def grow(self, cm: float = 0.8) -> None:
         self.height += cm

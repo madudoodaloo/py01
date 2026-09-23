@@ -32,4 +32,39 @@ subject analysis and oop terminology and key concepts expected to know on this e
 • inheritance from a parent category, calling parent methods through super, our method override can re-use the already existing code in the parent, code reusability
 • complex data relationships, nested components and inheritance chains
 • static methods, class methods, internal systems implemented as nested classes, decorator syntax
-• 
+
+• Programming Concept Mastery:
+• Can the learner explain how Python programs are structured?
+• Do they understand the difference between classes and objects?
+• Do they understand when and why to use inheritance?
+• Can they explain encapsulation benefits?
+• Do they understand method types (instance, class, static)?
+• Class definition with proper syntax
+• Object instantiation (creating instances)
+• Ask the learner to explain what methods are and why they used them
+• Method definition within classes
+• Method calls on object instances
+• State changes through method execution
+• Simulation logic using methods
+• __init__ method definition and usage
+• Parameter passing during object creation
+• Verify the program uses __init__ method for object initialization
+• Ask the learner to explain what __init__ does and why it's needed
+• Base class (Plant) with common features
+• Derived classes (Flower, Tree, Vegetable) with specialized features
+• super() calls to parent class methods
+• Method overriding for specialized behavior
+• Verify distinction between member and non-member functions
+• Nested classes (class within a class)
+• Inheritance chains (A -> B -> C)
+• Class methods (using classmethod()) vs instance methods
+• Static methods (using staticmethod()) vs regular functions
+• Non-member functions (outside any class)
+• Class methods can create instances without decorators
+• Static methods work without instance using traditional syntax
+• Non-member functions operate on class instances
+
+Advanced concepts discussion:
+• Ask about when to use each type of method
+• Discuss the benefits of nested classes
+• Explain the inheritance chain design choices
