@@ -13,3 +13,6 @@ https://medium.com/@lahirurajapakshe.stack/understanding-the-imperative-programm
 https://www.geeksforgeeks.org/python/access-modifiers-in-python-public-private-and-protected/
 https://www.geeksforgeeks.org/python/name-mangling-in-python/
 https://www.geeksforgeeks.org/python/getter-and-setter-in-python/
+https://www.geeksforgeeks.org/python/python-init-vs-new/
+https://www.geeksforgeeks.org/python/__init__-in-python/
+https://medium.com/@adarshapokharel/static-vs-instance-methods-in-oop-when-and-why-to-use-each-34a07f24f379
