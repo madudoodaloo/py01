@@ -38,16 +38,49 @@ class Plant:
 
     def __init__(self, name: str, height: float, age: int) -> None:
         self.name: str = name
-        self._height: float = float(height)
-        self._age: int = int(age)
+        self._height: float = 0.0
+        self._age: int = 0
+        self._is_initialized: bool = False
         self.stats: Plant.Stats = self.Stats()
 
+        self.set_height(height)
+        self.set_age(age)
+        self._is_initialized = True
+
+    # Accessors (Getters)
+    def get_height(self) -> float:
+        return self._height
+
+    def get_age(self) -> int:
+        return self._age
+
+    # Mutators (Setters)
+    def set_height(self, height: float) -> None:
+        if height < 0:
+            print(f"{self.name}: Error, height can't be negative")
+            if self._is_initialized:
+                print("Height update rejected")
+        else:
+            self._height = float(height)
+            if self._is_initialized:
+                print(f"Height updated: {int(self._height)}cm")
+
+    def set_age(self, age: int) -> None:
+        if age < 0:
+            print(f"{self.name}: Error, age can't be negative")
+            if self._is_initialized:
+                print("Age update rejected")
+        else:
+            self._age = int(age)
+            if self._is_initialized:
+                print(f"Age updated: {self._age} days")
+
     def grow(self, cm: float = 0.8) -> None:
-        self._height += cm
+        self.set_height(self._height + cm)
         self.stats.log_grow()
 
     def age(self, days: int = 1) -> None:
-        self._age += days
+        self.set_age(self._age + days)
         self.stats.log_age()
 
     def show(self) -> None:
