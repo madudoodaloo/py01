@@ -16,3 +16,8 @@ https://www.geeksforgeeks.org/python/getter-and-setter-in-python/
 https://www.geeksforgeeks.org/python/python-init-vs-new/
 https://www.geeksforgeeks.org/python/__init__-in-python/
 https://medium.com/@adarshapokharel/static-vs-instance-methods-in-oop-when-and-why-to-use-each-34a07f24f379
+https://www.geeksforgeeks.org/python/type-hints-in-python/
+https://www.geeksforgeeks.org/python/python-docstrings/
+https://www.geeksforgeeks.org/python/memory-management-in-python/
+https://www.geeksforgeeks.org/python/python-classes-and-objects/
+https://www.geeksforgeeks.org/python/what-does-the-if-__name__-__main__-do/

@@ -19,7 +19,7 @@ class Plant:
         self.age_days += grow_days
 
 
-def ft_plant_growth() -> None:
+def ft_plant_factory() -> None:
     print("=== Plant Factory Output ===")
     plants: list[Plant] = [
         Plant("Rose", 25.0, 30),
@@ -44,4 +44,4 @@ def ft_plant_growth() -> None:
     
 
 if __name__ == "__main__":
-    ft_plant_growth()
+    ft_plant_factory()
